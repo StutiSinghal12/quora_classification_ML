@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title> python app </title>
+			<style>
+				body 
+				{
+				background-image: url("quora.png");
+				background-size: cover;
+				background-color: blue;
+				}
+               
+				form
+				{
+				    text-align:center ;
+			    }
+				input
+				{
+					width :50% ;
+				}
+				input[type=submit]
+				{
+					background-color: green;
+					color: white;
+					width: 20%;
+				}
+			</style>
+
+	</head>
+	<body>
+		<form>
+			<center><img src="/static/quora.png" width="500"></center>
+			<center><h1>What type of quora question : {{results}}  </h1></center>
+				<form action = "{{ url_for('predict')}}" method="post">
+				<label for ="question"><h2>Enter question <h2></label>
+				<input type='text' id ="question",name ='qs',required='required',placeholder='enter your question'>
+			<br></br>
+				<label></label>
+				<input id="submit" type="submit" value="Predict sincere or not"></input>
+		</form>
+			
+	</body>
+</html>
